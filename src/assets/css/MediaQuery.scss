@@ -1,0 +1,143 @@
+
+/* XL */
+@media(max-width:1399px){
+    .container{
+        max-width: 1140px;
+    }
+    //navbar
+    .hamburger a img{
+        width: 2.4vw;
+    }
+    //banner
+    .banner h1{
+        transform: translateY(-40px);
+    }
+    .banner h1 img{
+        width: 35vw;
+    }
+    .banner-title p {
+        line-height: 2vw;
+    }
+    .banner-work h4{
+        padding: 1vw 0 0 0;
+    }
+    .banner-content{
+        margin-top: 8vw;
+    }
+    .socialMedia{
+    }
+}
+/* LG */
+@media(max-width:1199px){
+    .container{
+        max-width: 960px;
+    }
+    //navbar
+    .banner-title p {
+        line-height: 2.5vw;
+    }
+    .socialMedia a{
+        padding: 0 3vw 0 0;
+    }
+    .banner h1{
+        margin-top: 5vw;
+    }
+    .banner-content{
+        margin-top: 2vw;
+    }
+}
+/* MD */
+@media(max-width:991px){
+    .container{
+        max-width: 720px;
+    }
+    //navbar
+    .nav-part-2{
+        display: none;
+    }
+    .hamburger a img{
+        width: 4vw;
+    }
+    .Navbar{
+        padding: 3vw 7vw;
+    }
+    //banner
+    .banner h1{
+        margin-top: 12vw;
+    }
+    .banner h1 img{
+        width: 35vw;
+    }
+    .socialMedia a{
+        padding: 0 4vw 0 0;
+    }
+}
+
+/* SM  */
+@media(max-width:767px){
+    .container{
+        max-width: 540px;
+    }
+    //navbar
+    .hamburger a img{
+        width: 5vw;
+    }
+    //banner
+    .banner h1 {
+        font-size: 17vw;
+        margin-top: 18vw;
+        transform: translateY(20px);
+    }
+    .form-tabale {
+        padding: 20px;
+    }
+    .banner-content{
+        flex-direction: column-reverse;
+        align-items: start;
+    }
+    .banner-work{
+        transform: translateY(-36vw);
+         text-align: start;
+    }
+    .banner-content p{
+        width: 25vw;
+    }
+    .socialMedia-content{
+        margin-top: 25vw;
+    } 
+
+}
+/* SM  */
+@media(max-width:565px){
+    .star{
+        margin-left: 20px; 
+    }
+    //navbar
+    .banner h1{
+        margin: 35vw 0 15vw 0;
+    }
+    .banner h1 img{
+        width: 30vw;
+    }
+    .logo img{
+        width: 40vw;
+    }
+    .hamburger a img{
+        width: 7.4vw;
+    }
+    .banner-work{
+        transform: translateY(-50vw);
+    }
+    .banner-work h4{
+        padding: 4vw 0 0 0;
+    }
+    .banner-content p{
+        width: 70vw;
+    }
+    .banner-title p {
+        line-height: 5vw;
+    }
+    .socialMedia-content{
+        margin-top: 28vw;
+    } 
+}
