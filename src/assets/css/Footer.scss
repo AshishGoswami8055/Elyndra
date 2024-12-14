@@ -1,0 +1,71 @@
+.footer,.footer a{
+    color: white;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-family: 'Inter';
+}
+.footer{
+    padding: 6vw 0 4vw 0;
+    border-top: 1px solid #707070;
+}
+.footer p{
+    font-weight: 500;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-family: "IBM Plex Mono", monospace;
+}
+.footerContent{
+    display: flex;
+    justify-content: space-around;
+}
+.footerContent p{
+    margin: 0 0 1vw 0;
+}
+.footerContent ul li a{
+    margin: 0.5vw 0;
+    transition: all 0.2s ease-in-out;
+}
+.footerContent ul li a:hover{
+    color: rgb(216, 160, 255);
+}
+.footerSubscribe input{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    color: rgb(216, 160, 255);
+    border-bottom: 1px solid white;
+    width: 16vw;
+    padding: 1vw 0vw;
+}
+.footerContent input::placeholder{
+    color: rgb(230, 230, 230);
+    font-family: 'Inter';
+}
+.footerLogo{
+    // padding: 0 5vw;
+    text-align: center;
+}
+.footerLogo h2{
+    position: relative;
+    font-family: "Space Mono", monospace !important;
+    font-size: 17vw;
+    letter-spacing: 2vw;
+}
+.footerLogo h2:hover img{
+    transform: rotate(90deg);
+}
+.footerLogo h2 img{
+    position: absolute;
+    top: 2.5vw;
+    left: 4vw;
+    transition: all 0.3s ease-in-out;
+}
+.footerLogo p {
+    text-align: end;
+    padding: 0 7vw;
+    text-transform: capitalize;
+    font-family: 'Helvetica Neue';
+    word-spacing: 0.23vw;
+    // font-weight: 100;
+}

@@ -21,7 +21,7 @@ $breakpoint-mobile: 768px;
   padding: 20px 50px;
   height: 100px;
   background-color: $primary-color;
-  // background-color: red;
+  // border-bottom: 1px solid #707070;
   flex-wrap: wrap;
 }
 .Navbar  a {
@@ -66,7 +66,7 @@ $breakpoint-mobile: 768px;
 .Navbar .nav-part-2 a:hover:not(.logo)::after{
   left: 0;
 }
-.nav-part-2{
+.nav-part-2 .nav-content{
   display: flex;
   gap: 10vw;
 }
@@ -80,4 +80,7 @@ $breakpoint-mobile: 768px;
 }
 .hamburger a img:hover{
   transform: rotate(90deg);
+}
+.hamburger a img:focus{
+  // transform: rotate(45deg);
 }

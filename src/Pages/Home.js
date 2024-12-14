@@ -273,7 +273,7 @@ export default function Home() {
   const textLeave = ()=> setCursorVariant("default");
 
   return (
-    <div>
+    <div className="home">
       <div className="banner">
         <h1 onMouseEnter={textEnter} onMouseLeave={textLeave}>
           <AnimatedLetters letterClass={letterClass} strArray={nameArray} idx={15} />
