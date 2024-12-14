@@ -39,7 +39,7 @@ export default function Footer() {
             </div>
             <div className='footerSubscribe'>
                 <div><p>Subscribe</p></div>
-                <div>
+                <div className='footerInput'>
                     <input type='text' placeholder='Email address'/>
                     <a href='#'>Send</a>
                 </div>

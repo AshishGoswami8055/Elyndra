@@ -35,7 +35,6 @@
     font-size: 20px;
     color: rgb(216, 160, 255);
     border-bottom: 1px solid white;
-    width: 16vw;
     padding: 1vw 0vw;
 }
 .footerContent input::placeholder{
@@ -45,6 +44,7 @@
 .footerLogo{
     // padding: 0 5vw;
     text-align: center;
+    // margin-top: 5vw;
 }
 .footerLogo h2{
     position: relative;
@@ -69,3 +69,29 @@
     word-spacing: 0.23vw;
     // font-weight: 100;
 }
+.footerInput{
+    display: flex;
+}
+.footerPages{
+    animation: footerPageAnimation both;
+    animation-timeline: view(80% 5%);
+}
+@keyframes footerPageAnimation {
+    from{
+        opacity: 0.5;
+        transform: translateY(200px) scale(0.5);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+.footerPortfolio{
+    animation: footerPageAnimation both;
+    animation-timeline: view(80% 5%);
+}
+.footerContact{
+    animation: footerPageAnimation both;
+    animation-timeline: view(80% 5%);
+}
+
