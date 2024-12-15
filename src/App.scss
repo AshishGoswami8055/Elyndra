@@ -7,8 +7,15 @@
 ul{
   list-style: none;
 }
-$primary-color: #171717;
-$white-color: #fff;
+:root{
+  // --primary-color: #171717;
+  // --white-color: #fff;
+
+  --primary-color: #fff;
+  --white-color:  #171717;
+
+}
+
 $breakpoint-mobile: 768px;
 
 //scrollbar
@@ -38,7 +45,7 @@ $breakpoint-mobile: 768px;
   color: rgb(255, 255, 255);
 }
 body {
-  background-color: $primary-color;
+  background-color: var(--primary-color);
   // height: 300vh;
 }
 a {
@@ -49,7 +56,7 @@ a {
   overflow: hidden;
 }
 .banner h1{
-  color: $white-color;
+  color: var(--white-color);
   font-family: "Space Mono",monospace !important;
   font-size: 17vw;
   text-align: center;
@@ -60,8 +67,7 @@ a {
 }
 .banner h1 span span:nth-child(-n+4),.banner-work h4 span{
   background-color:  rgb(170, 51, 255);
-  // animation-delay: 3s;
-  // animation: fadeInLeft 1s;
+  color: white;
 }
 .home{
   padding: 0 0 10vw 0
@@ -73,7 +79,7 @@ a {
   flex-wrap: wrap-reverse;
   align-items: center;
   justify-content: space-between;
-  color: white;
+  color: var(--white-color);
   // font-family: 'Space Mono';
   font-family: 'Inter';
   font-weight: 300;
@@ -104,7 +110,7 @@ a {
   animation: fadeInLeft 1.5s;
 }
 .socialMedia a{
-  color: white;
+  color: var(--white-color);
   font-family: "Space Mono";
   font-weight: 100;
   padding:0 1.3vw 0 0 ;
@@ -356,11 +362,13 @@ h1 {
 .cursor{
   width: 40px;
   height: 40px;
-  background-color: white;
+  // background-color: white;
+  background-color: var(--white-color);
   border-radius: 50%;
   position: fixed;
   top: 0;
   left: 0;
   pointer-events: none;
   filter: blur(70px);
+  // z-index: 99;
 }

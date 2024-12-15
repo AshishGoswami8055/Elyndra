@@ -258,6 +258,7 @@ export default function Home() {
     default: {
       x:mousePosition.x - 20,
       y:mousePosition.y - 20,
+      mixBlendMode:"difference",
       type:"smooth"
     },
     text:{

@@ -1,6 +1,4 @@
 
-$primary-color: #171717;
-$white-color: #fff;
 $breakpoint-mobile: 768px;
 
 @import 'animate.css';
@@ -20,14 +18,14 @@ $breakpoint-mobile: 768px;
   align-items: center;
   padding: 20px 50px;
   height: 100px;
-  background-color: $primary-color;
+  // background-color: var(--primary-color);
   // border-bottom: 1px solid #707070;
   flex-wrap: wrap;
 }
 .Navbar  a {
   position: relative;
   text-transform: uppercase;
-  color: $white-color;
+  color: var(--white-color);
   font-weight: 500;
   padding: 0 5px 1px;
   z-index: 9;
@@ -43,11 +41,11 @@ $breakpoint-mobile: 768px;
   background-color: rgb(170, 51, 255);
 }
 .Navbar .active {
-  background-color: $white-color;
-  color: $primary-color; 
+  background-color: var(--white-color);
+  color: var(--primary-color); 
 }
 .Navbar .nav-part-2 a:hover:not(.logo) {
-  color: $primary-color;
+  color: var(--primary-color);
 }
 .Navbar .nav-part-2 a:not(.logo)::after{
   content: "";
@@ -59,7 +57,7 @@ $breakpoint-mobile: 768px;
   right: 0;
   left: -100%;
   z-index: -1;
-  background-color: $white-color;
+  background-color: var(--white-color);
 
   transition: left 0.3s ease-in-out;
 }
@@ -83,4 +81,41 @@ $breakpoint-mobile: 768px;
 }
 .hamburger a img:focus{
   // transform: rotate(45deg);
+}
+
+//them btn 
+/* Style the checkbox to look like a toggle switch */
+.theme-checkbox {
+  appearance: none; /* Remove default checkbox styling */
+  width: 50px;
+  height: 24px;
+  background-color: #171717; /* Default background color */
+  border-radius: 34px; /* Round edges for the toggle */
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Circular knob inside the switch */
+.theme-checkbox::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Change background and knob position when checked */
+.theme-checkbox:checked {
+  background-color: #fff; /* Active theme color */
+}
+
+.theme-checkbox:checked::before {
+  transform: translateX(26px); /* Move knob to the right */
 }

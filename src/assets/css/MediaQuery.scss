@@ -63,6 +63,13 @@
         gap: 30px;
         padding: 2vw 7vw;
     }
+    .nav-content a{
+        color: white;
+    }
+    .nav-content a.active{
+        color: #171717;
+        background-color: white;
+    }
     .nav-part-2 {
         // display: none;
         gap: 30px;
