@@ -20,12 +20,9 @@ export default function Navbar() {
     if (!themeChange) {
       document.documentElement.style.setProperty("--primary-color", "#171717");
       document.documentElement.style.setProperty("--white-color", "#fff");
-
-      console.log("Dark Mode");
     } else {
       document.documentElement.style.setProperty("--primary-color", "#fff");
       document.documentElement.style.setProperty("--white-color", "#171717");
-      console.log("Light Mode");
     }
   }
   return (

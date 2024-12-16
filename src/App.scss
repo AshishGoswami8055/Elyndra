@@ -116,8 +116,57 @@ a {
   padding:0 1.3vw 0 0 ;
 }
 
+//loader 
 
+.blackLoader{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #171717;
+  color: white;
+  z-index: 999;
+}
+.blackLoader .Welcome_text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
+}
+.Welcome_text h2{
+  // font-family: "Space Mono",monospace !important;
+  font-family: 'Helvetica Neue';
+  letter-spacing: 1vw;
+  font-weight: 800;
+  font-size: 7vw;
+  text-align: center;
+}
+.revealAni .parentReveal{
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.childReveal{
+  transform: translateY(100%);
+  text-transform: uppercase;
+}
+.childReveal span{
+  color: #dcacff;
+
+}
+
+.purpleLoader{
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 0vh;
+  background-color: #A837F8;
+  z-index: 999;
+}
+.mainContent{
+ width: 100%;
+ height: 0;
+}
 
 
 
@@ -362,13 +411,18 @@ h1 {
 .cursor{
   width: 40px;
   height: 40px;
-  // background-color: white;
-  background-color: var(--white-color);
+  background-color: white;
+  // background-color: var(--white-color);
   border-radius: 50%;
   position: fixed;
   top: 0;
   left: 0;
   pointer-events: none;
+  mix-blend-mode: difference;
   filter: blur(70px);
-  // z-index: 99;
+  z-index: 99;
+}
+.ScrollMain{
+  width: 100%;
+  height: 100%;
 }

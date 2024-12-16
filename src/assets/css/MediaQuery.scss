@@ -70,6 +70,13 @@
         color: #171717;
         background-color: white;
     }
+    .Navbar .nav-part-2 a:hover:not(.logo) {
+        color: #171717;
+    }
+    .Navbar .nav-part-2 a:not(.logo)::after {
+        background-color: white;
+        color: #171717;
+    }
     .nav-part-2 {
         // display: none;
         gap: 30px;

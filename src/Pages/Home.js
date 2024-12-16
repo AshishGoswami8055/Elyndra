@@ -253,20 +253,20 @@ export default function Home() {
       window.removeEventListener("mousemove", mouseMove);
     }
   }, [])
-
+  const viewportWidth = window.innerWidth;
+  const customCursorWidth = (30 / 100) * viewportWidth; // 35vw in pixels
+  const customCursorHeight = customCursorWidth; 
   const variants = {
     default: {
       x:mousePosition.x - 20,
       y:mousePosition.y - 20,
-      mixBlendMode:"difference",
       type:"smooth"
     },
     text:{
-      x:mousePosition.x - 175,
-      y:mousePosition.y - 175,
-      width: 350,
-      height: 350,
-      mixBlendMode:"difference",
+      x: mousePosition.x - 0.5 * customCursorWidth, // Offset by half the width
+      y: mousePosition.y - 0.5 * customCursorHeight,
+      width: "30vw",
+      height: "30vw",
       type:"smooth"
     }
   }
