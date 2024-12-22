@@ -59,12 +59,12 @@ function App() {
   return (
     <>
       <div id="main">
-        <div className="blackLoader">
+        {/* <div className="blackLoader">
           <div className='Welcome_text'>
             <h2 className='revealAni'><span className='parentReveal'><span className='childReveal'>Welcome <span>to</span></span></span></h2>
           </div>
         </div>
-        <div className="purpleLoader"></div>
+        <div className="purpleLoader"></div> */}
         <div className="mainContent">
             <Navbar />
             <AllRoutes />

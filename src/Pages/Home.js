@@ -1,140 +1,8 @@
-
-// import { useEffect, useRef, useState } from 'react';
-// import AnimatedLetters from '../Components/AnimatedTexts/AnimatedLetters';
-// import ball from "../assets/images/ball.png";
-// import { gsap } from "gsap";
-// import {motion} from "framer-motion"
-
-// export default function Home() {
-//   const [mousePosition, setMousePosition] = useState({
-//     x:0,
-//     y:0
-//   });
-//   const [cursorVariant, setCursorVariant] = useState("default");
-//   const [letterClass, setLetterClass] = useState('text-animate');
-//   const nameArray = ["E", "L", "Y", "N", "D", "R", "A"];
-//   const boxRef = useRef(null);
-//   const [isMouseActive, setIsMouseActive] = useState(false); // Track mouse activity
-//   const [mouseTimeout, setMouseTimeout] = useState(null); // Timeout to detect inactivity
-
-//   // Floating animation
-//   const startFloating = () => {
-//     gsap.to(boxRef.current, {
-//       y: "+=20",
-//       repeat: -1,
-//       yoyo: true,
-//       ease: "power1.inOut",
-//       duration: 1.5,
-//     });
-//   };
-
-//   const stopFloating = () => {
-//     gsap.killTweensOf(boxRef.current, "y"); // Stop floating animation on the y-axis
-//   };
-
-//   const handleMouseMove = (e) => {
-//     setIsMouseActive(true);
-//     clearTimeout(mouseTimeout);
-
-//     const rect = boxRef.current.getBoundingClientRect();
-//     const offsetX = e.clientX - (rect.left + rect.width / 2);
-//     const offsetY = e.clientY - (rect.top + rect.height / 2);
-
-//     // Smooth hover animation with subtle offsets
-//     gsap.to(boxRef.current, {
-//       x: offsetX * 0.1, // Smaller offset for smoother hover
-//       y: offsetY * 0.1,
-//       duration: 0.5,
-//       ease: "power2.out",
-//       overwrite: true, // Blend hover and floating animations
-//     });
-
-//     setMouseTimeout(
-//       setTimeout(() => {
-//         setIsMouseActive(false);
-//       }, 2000)
-//     );
-//   };
-
-//   const handleMouseLeave = () => {
-//     setIsMouseActive(false); // Allow floating to resume
-//     gsap.to(boxRef.current, { x: 0, duration: 0.5, ease: "power2.out" });
-//   };
-
-//   useEffect(() => {
-//     if (!isMouseActive) {
-//       startFloating(); // Start floating when idle
-//     } else {
-//       stopFloating(); // Pause floating during hover
-//     }
-//   }, [isMouseActive]);
-
-//   useEffect(() => {
-//     const timer = setTimeout(() => {
-//       setLetterClass('text-animate-hover');
-//     }, 4000);
-
-//     // Initial fade-in animation
-//     if (boxRef.current) {
-//       gsap.fromTo(
-//         boxRef.current,
-//         { opacity: 0, y: 100 },
-//         { opacity: 1, y: 0, duration: 3, delay: 2 }
-//       );
-//     }
-
-//     return () => clearTimeout(timer);
-//   }, []);
-//   //cursor useEffect
-
- 
-
-//   useEffect(() => {
-//     const mouseMove = (e)=>{
-//       setMousePosition({
-//         x: e.clientX,
-//         y: e.clientY
-//       })
-//     }
-//     window.addEventListener("mousemove", mouseMove);
-//     return()=>{
-//       window.removeEventListener("mousemove", mouseMove);
-//     }
-//   }, [])
-
-//   const variants = {
-//     default: {
-//       x:mousePosition.x - 50,
-//       y:mousePosition.y - 50
-//     }
-//   }
-
-//   return (
-//     <div>
-//       <div className="banner">
-//         <h1>
-//           <AnimatedLetters letterClass={letterClass} strArray={nameArray} idx={15} />
-//           <img
-//             src={ball}
-//             ref={boxRef}
-//             className="box"
-//             width="950px"
-//             alt="Ball"
-//             onMouseMove={handleMouseMove}
-//             onMouseLeave={handleMouseLeave}
-//           />
-//         </h1>
-//       </div>
-//       <motion.div className="cursor"
-//       variants={variants}
-//       animate={cursorVariant}/>
-//     </div>
-//   );
-// }
-
 import { useEffect, useRef, useState } from 'react';
 import AnimatedLetters from '../Components/AnimatedTexts/AnimatedLetters';
 import ball from "../assets/images/ball.png";
+import team1 from "../assets/images/sampleTeam.jpg";
+import team2 from "../assets/images/sampleTeam2.jpg";
 import { gsap } from "gsap";
 import {motion} from "framer-motion"
 
@@ -234,10 +102,6 @@ export default function Home() {
   
     return () => clearTimeout(timer);
   }, []);
-  
-  
-  
-
 
   //cursor useEffect
 
@@ -275,6 +139,7 @@ export default function Home() {
 
   return (
     <div className="home">
+      {/* Banner  */}
       <div className="banner">
         <h1 onMouseEnter={textEnter} onMouseLeave={textLeave}>
           <AnimatedLetters letterClass={letterClass} strArray={nameArray} idx={15} />
@@ -304,6 +169,150 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* work project  */}
+      <div className='workProject'>
+        <div className='workProjectTitle'>
+          <h2>See our work and <span>projects</span></h2>
+        </div>
+        <div className='workProjectContent'>
+          <div className='workProjectBox'>
+            <div className='workProjectBoxTitle'>
+              <a href='#'><span>1</span> Game Development</a>
+            </div>
+            <div>button</div>
+          </div>
+        </div>
+        <div className='workProjectContent'>
+          <div className='workProjectBox'>
+            <div className='workProjectBoxTitle'>
+              <a href='#'><span>2</span> Ui/Ux Graphic Design</a>
+            </div>
+            <div>button</div>
+          </div>
+        </div>
+        <div className='workProjectContent'>
+          <div className='workProjectBox'>
+            <div className='workProjectBoxTitle'>
+              <a href='#'><span>3</span> Web Development</a>
+            </div>
+            <div>button</div>
+          </div>
+        </div>
+        <div className='workProjectContent'>
+          <div className='workProjectBox'>
+            <div className='workProjectBoxTitle'>
+              <a href='#'><span>4</span> Application Development</a>
+            </div>
+            <div>button</div>
+          </div>
+        </div>
+      </div>
+      <div className='workProject'>
+        <div className='workProjectTitle'>
+          <h2>open positions</h2>
+        </div>
+        <div className='workProjectContent'>
+          <div className='workProjectBox'>
+            <div className='workProjectBoxTitle'>
+              <a href='#'>Developer</a>
+            </div>
+            <div>button</div>
+          </div>
+        </div>
+        <div className='workProjectContent'>
+          <div className='workProjectBox'>
+            <div className='workProjectBoxTitle'>
+              <a href='#'>UI Designer</a>
+            </div>
+            <div>button</div>
+          </div>
+        </div>
+        <div className='workProjectContent'>
+          <div className='workProjectBox'>
+            <div className='workProjectBoxTitle'>
+              <a href='#'>Graphic Designer</a>
+            </div>
+            <div>button</div>
+          </div>
+        </div>
+       
+      </div>
+      {/* team  */}
+      <div className="team">
+        <div className='teamTitle'>
+          <h2>join us & Our Awesome <span>team</span></h2>
+        </div>
+        <div className="teamContent">
+          <div className='teamBox'>
+            <div className='teamBoxImg'>
+              <img src={team1}  alt='team'/>
+            </div>
+            <div className='teamBoxDetails'>
+              <div className='teamMemberName'>
+                <h4>Ashish Goswami</h4>
+                <h5>Full Stack Web Developer</h5>
+              </div>
+            </div>
+          </div>
+          <div className='teamBox'>
+            <div className='teamBoxImg'>
+              <img src={team2}  alt='team'/>
+            </div>
+            <div className='teamBoxDetails'>
+              <div className='teamMemberName'>
+                <h4>Pushpa Raj</h4>
+                <h5>Full Stack Web Developer</h5>
+              </div>
+            </div>
+          </div>
+          <div className='teamBox'>
+            <div className='teamBoxImg'>
+              <img src={team1}  alt='team'/>
+            </div>
+            <div className='teamBoxDetails'>
+              <div className='teamMemberName'>
+                <h4>Ashish Goswami</h4>
+                <h5>Full Stack Web Developer</h5>
+              </div>
+            </div>
+          </div>
+          <div className='teamBox'>
+            <div className='teamBoxImg'>
+              <img src={team2}  alt='team'/>
+            </div>
+            <div className='teamBoxDetails'>
+              <div className='teamMemberName'>
+                <h4>Pushpa Raj</h4>
+                <h5>Full Stack Web Developer</h5>
+              </div>
+            </div>
+          </div>
+          <div className='teamBox'>
+            <div className='teamBoxImg'>
+              <img src={team1}  alt='team'/>
+            </div>
+            <div className='teamBoxDetails'>
+              <div className='teamMemberName'>
+                <h4>Ashish Goswami</h4>
+                <h5>Full Stack Web Developer</h5>
+              </div>
+            </div>
+          </div>
+          <div className='teamBox'>
+            <div className='teamBoxImg'>
+              <img src={team2}  alt='team'/>
+            </div>
+            <div className='teamBoxDetails'>
+              <div className='teamMemberName'>
+                <h4>Pushpa Raj</h4>
+                <h5>Full Stack Web Developer</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Cursor  */}
       <motion.div className="cursor"
       variants={variants}
       animate={cursorVariant}/>

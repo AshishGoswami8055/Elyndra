@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.1s ease-in-out;
   // cursor: none;
+}
+.cursor{
+  transition: none;
 }
 ul{
   list-style: none;
@@ -13,6 +18,7 @@ ul{
 
   --primary-color: #fff;
   --white-color:  #171717;
+
 
 }
 
@@ -54,6 +60,8 @@ a {
 }
 .banner{
   overflow: hidden;
+  padding: 0 0 5vw 0;
+  border-bottom: 1px solid #ccc;
 }
 .banner h1{
   color: var(--white-color);
@@ -64,6 +72,7 @@ a {
   user-select: none; /* Prevent text selection */
   letter-spacing: 2vw;
   transform: translateY(-100px);
+  // line-height: 1;
 }
 .banner h1 span span:nth-child(-n+4),.banner-work h4 span{
   background-color:  rgb(170, 51, 255);
@@ -168,9 +177,93 @@ a {
  height: 0;
 }
 
+// Work Project section
+
+.workProject{
+  padding: 5vw 7vw;
+}
+.team{
+  padding: 2vw 7vw;
+}
+.workProjectTitle,.teamTitle{
+  max-width: 520px;
+  margin: 0 0 3vw 0;
+} 
+.workProjectTitle h2,.teamTitle h2{
+  font-family: "Lexend", serif!important;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 3vw;
+  color: var(--white-color);
+}
+.teamTitle h2 span,.workProjectTitle h2 span{
+  // background-color: #A837F8;
+  // color: #A837F8;
+  // color: white;
+}
+.workProjectBox{
+  display: flex;
+  justify-content: space-between;
+}
+.workProjectBoxTitle span{
+  font-family: 'Inter'!important;
+  margin-right: 3vw;
+}
+.workProjectBoxTitle a{
+  color: var(--white-color);
+}
+.workProjectContent{
+  padding: 1.4vw 0;
+  font-family: "Lexend", serif!important;
+  font-size: 1.4vw;
+  border-top: 1px solid #ccc;
+}
 
 
-
+// team 
+.teamContent{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  justify-content: space-between;
+  gap: 45px;
+}
+.teamBoxImg{
+  width: 100%;
+  height: 100%;
+}
+.teamBoxImg img{
+  width: 100%;
+  height: 100%;
+  filter: saturate(0);
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.04) translateX(4px);
+}
+.teamBoxDetails{
+  position: relative;
+}
+.teamBox:hover .teamMemberName{
+  transform: translateY(0%);
+}
+.teamBox:hover .teamBoxImg img{
+  filter: saturate(1);
+  transform: scale(1.04) translateX(0px);
+}
+.teamBox{
+  overflow: hidden;
+}
+.teamMemberName{
+  position: absolute;
+  bottom: 20px;
+  left: 2%;
+  transform: translateY(150%);
+  transition: all 0.3s ease-in-out;
+}
+.teamMemberName h4,.teamMemberName h5{
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-size: 22px;
+  font-family: "Space Mono",monospace !important;
+}
 
 
 
@@ -419,7 +512,7 @@ h1 {
   left: 0;
   pointer-events: none;
   mix-blend-mode: difference;
-  filter: blur(70px);
+  // filter: blur(70px);
   z-index: 99;
 }
 .ScrollMain{
