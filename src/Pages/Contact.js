@@ -11,7 +11,27 @@ export default function Contact() {
             </div>
             <div className='contactContent'>
               <div className='contactForm'>
-                
+                <div className='contactTitle'>
+                  <h2>What can we help You with?</h2>
+                </div>
+                <div className="formContact">
+                  <form>
+                    <div>
+                      <input type="text" placeholder="E-mail" />
+                    </div>
+                    <div style={{ display: "flex", gap: "1rem" }}>
+                      <input type="text" placeholder="First name" />
+                      <input type="text" placeholder="Last name" />
+                    </div>
+                    <div>
+                      <textarea placeholder="Message"></textarea>
+                    </div>
+                    <div>
+                      <button type="submit">Send Message</button>
+                    </div>
+                  </form>
+                </div>
+
               </div>
               <div></div>
             </div>

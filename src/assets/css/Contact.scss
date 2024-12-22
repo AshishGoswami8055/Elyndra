@@ -18,3 +18,53 @@
     line-height: 1;
     margin: 0 0 4vw 0;
 }
+.contactTitle{
+    max-width: 520px;
+}
+.contactTitle h2{
+    font-family: "Lexend", serif!important;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 3vw;
+    color: var(--white-color);
+}
+.formContact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.formContact form {
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+  
+.formContact input,.formContact textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--white-color);
+    padding: 0.5rem 0;
+    background: none;
+    outline: none;
+    color: var(--white-color);
+}
+.formContact textarea {
+    height: 100px;
+}
+.formContact button{
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    border-radius: 5rem;
+    font-family: "Space Mono",monospace !important;
+    font-size: 12px;
+    line-height: 1.25em;
+    font-weight: 500;
+    letter-spacing: .05em;
+    padding: 9px 30px;
+    border: none;
+}
+::placeholder{
+    color: var(--white-color);
+}
