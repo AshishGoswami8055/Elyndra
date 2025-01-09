@@ -122,7 +122,7 @@
     // contact form
     .contactContent{
         grid-template-columns: repeat(1, 1fr);
-        gap: 10vw;
+        gap: 100px;
     }
     .formContact{
         display: block;
@@ -153,7 +153,10 @@
     .teamContent{
         grid-template-columns: repeat(1, 1fr);
     }
-    
+    //porfolio
+    .portfolio_Box{
+        grid-template-columns: repeat(1, 1fr);
+    }
     //banner
     .banner h1 {
         font-size: 17vw;
@@ -208,10 +211,12 @@
     }
     //navbar
     .banner h1{
+        line-height: 2;
         margin: 35vw 0 15vw 0;
+        transform: translateY(50px);
     }
     .banner h1 img{
-        width: 30vw;
+        width: 35vw;
     }
     .logo img{
         width: 40vw;
@@ -220,23 +225,34 @@
         width: 7.4vw;
     }
     .banner-work{
-        transform: translateY(-50vw);
+        transform: translateY(-65vw);
     }
     .banner-work h4{
         padding: 4vw 0 0 0;
     }
     .banner-content p{
         width: 70vw;
+        margin: 7px 0;
     }
     .banner-title p {
-        line-height: 5vw;
+        line-height: 25px;
+    }
+    .banner-title{
+        transform: translateY(80px);
     }
     .socialMedia-content{
-        margin-top: 28vw;
+        margin-top: 40vw;
     } 
     // footer 
+    .footer{
+        padding: 70px 0!important;
+    }
+    .footerContent p{
+
+        margin:10px 0 17px 0!important;
+    }
     .footerContent {
-        grid-template-columns: repeat(1, 60px);
+        grid-template-columns: repeat(1, 1fr);
         gap: 10vw;
         padding: 0 10vw;
         justify-content: start!important;
@@ -248,4 +264,48 @@
     .Map iframe{
         height: 80vw;
     } 
+    //work 
+    .workProjectTitle h2,.teamTitle h2{
+        font-size: 6vw!important;
+        margin-bottom: 25px;
+    }
+    .workProjectBoxTitle a{
+        font-size: 17px;
+    }
+    .hoverDesign svg{
+        font-size: 20px;
+    } 
+    .hoverDesign {
+        line-height: 58px;
+    }
+    .workProjectContent{
+        padding: 20px 0;
+    }
+    .hithere p{
+        width: 100%;
+        font-size: 16px;
+    }
+    .workProject,.team{
+        padding-top:100px ;
+        padding-bottom:0px ;
+    }
+    .teamMemberName{
+        transform: translateY(0%);
+    } 
+    .teamMemberName h4, .teamMemberName h5{
+        font-size: 18px;
+        font-family: "Inter" !important;
+        font-weight: 400;
+        margin: 2px 0;
+        padding: 5px 10px;
+        color: white;
+        border-radius: 10px;
+        background-color:#171717;
+    }
+    .footerContent ul li a {
+        padding: 8px 0;
+    }
+    .footerContent p{
+        font-size: 22px;
+    }
 }

@@ -221,7 +221,7 @@ export default function Home() {
             <div className='workProjectBoxTitle'>
               <a href='#'>Developer</a>
             </div>
-            <div>button</div>
+            <div></div>
           </div>
         </div>
         <div className='workProjectContent'>
@@ -229,7 +229,7 @@ export default function Home() {
             <div className='workProjectBoxTitle'>
               <a href='#'>UI Designer</a>
             </div>
-            <div>button</div>
+            <div></div>
           </div>
         </div>
         <div className='workProjectContent'>
@@ -237,7 +237,7 @@ export default function Home() {
             <div className='workProjectBoxTitle'>
               <a href='#'>Graphic Designer</a>
             </div>
-            <div>button</div>
+            <div></div>
           </div>
         </div>
        
