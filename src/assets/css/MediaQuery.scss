@@ -110,6 +110,35 @@
     .socialMedia a{
         padding: 0 4vw 0 0;
     }
+    .teamContent{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .team .teamTitle{
+        max-width: 100%;
+    }
+    .team .teamTitle h2{
+        font-size: 5vw;
+    }
+    // contact form
+    .contactContent{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10vw;
+    }
+    .formContact{
+        display: block;
+    }
+    .formContact form{
+        width: 100%;
+    }
+    .contactSecond .contactTitle{
+        gap: 4vw;
+    }
+    .Map iframe{
+        height: 50vw;
+    } 
+    .contactTitle h2{
+        font-size: 5vw;
+    }
 }
 
 /* SM  */
@@ -121,6 +150,10 @@
     .hamburger a img{
         width: 5vw;
     }
+    .teamContent{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
     //banner
     .banner h1 {
         font-size: 17vw;
@@ -137,6 +170,7 @@
     .banner-work{
         transform: translateY(-36vw);
          text-align: start;
+         animation: fadeInLeft 2s;
     }
     .banner-content p{
         width: 25vw;
@@ -155,6 +189,16 @@
     }
     .footerLogo{
         margin-top: 8vw;
+    }
+    //contact 
+    .contactSecond .contactTitle{
+        gap: 7vw;
+    }
+    .Map iframe{
+        height: 60vw;
+    } 
+    .contactTitle h2{
+        font-size: 7vw;
     }
 }
 /* SM  */
@@ -197,4 +241,8 @@
         padding: 0 10vw;
         justify-content: start!important;
     }
+    //contact 
+    .Map iframe{
+        height: 80vw;
+    } 
 }

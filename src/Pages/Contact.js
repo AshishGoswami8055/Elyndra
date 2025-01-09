@@ -1,7 +1,31 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import '../assets/css/Contact.scss';
 import Map from '../assets/images/map2.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import emailjs from '@emailjs/browser'
 export default function Contact() {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_xbno9ob', 'template_ua4trvj', form.current, {
+        publicKey: 'vq7LUKWmQeR6M7O4M',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS Data!');
+          e.target.reset();
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
   return (
     <>
       <div className='contact_banner'>
@@ -15,25 +39,38 @@ export default function Contact() {
                   <h2>What can we help You with?</h2>
                 </div>
                 <div className="formContact">
-                  <form>
+                  <form ref={form} onSubmit={sendEmail}>
                     <div>
-                      <input type="text" placeholder="E-mail" />
+                      <input type="text" placeholder="E-mail" name='user_email'/>
                     </div>
                     <div style={{ display: "flex", gap: "1rem" }}>
-                      <input type="text" placeholder="First name" />
-                      <input type="text" placeholder="Last name" />
+                      <input type="text" placeholder="First name" name='user_fname'/>
+                      <input type="text" placeholder="Last name" name='user_lname' />
                     </div>
                     <div>
-                      <textarea placeholder="Message"></textarea>
+                      <textarea placeholder="Message" name='message'></textarea>
                     </div>
                     <div>
-                      <button type="submit">Send Message</button>
+                      <button type="submit">Send_Message</button>
                     </div>
                   </form>
                 </div>
-
               </div>
-              <div></div>
+              <div className='contactSecond'>
+                  <div className='contactTitle'>
+                    <h2>GET IN <span className='bg'>TOUCH</span></h2>
+                    <h3>Email :- <span>elyndra31@gmail.com</span></h3>
+                    <h3>Contact :- <span>+91 9898989898</span></h3>
+                    <h3>Address :- <span>123 Business Street, Suite 100, City, State, ZIP</span></h3>
+                    <h3>Website :- <span><a href='/'>www.elyndra.in</a></span></h3>
+                    <h3>Follow Us On :- </h3>
+                    <div className='SocialMediaIcons'>
+                        <a href='#'><FontAwesomeIcon icon={faInstagram} /></a>
+                        <a href='#'><FontAwesomeIcon icon={faFacebook}/></a>
+                        <a href='#'><FontAwesomeIcon icon={faLinkedinIn}/></a>
+                    </div>
+                  </div>
+              </div>
             </div>
       </div>
 

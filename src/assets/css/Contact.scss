@@ -4,7 +4,28 @@
     border: none;
     height: 35vw;
 }
-
+.contactContent{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    padding:7vw 7vw
+}
+.contactSecond .contactTitle h3 a {
+    color: var(--white-color);
+}
+.contactSecond .contactTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    font-family: "Lexend", serif!important;
+}
+.contactSecond .contactTitle h3 {
+    color: var(--white-color);
+}
+.contactSecond .contactTitle h3 span{
+    font-weight: 300;
+}
 .contact_banner h1{
     color: var(--white-color);
     font-family: "Space Mono",monospace !important;
@@ -27,44 +48,74 @@
     text-transform: uppercase;
     font-size: 3vw;
     color: var(--white-color);
+    margin-bottom: 20px;
 }
 .formContact {
+    margin-top: 2vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-  
 .formContact form {
-    width: 25vw;
+    width: 30vw;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    font-family: 'Inter';
 }
-  
 .formContact input,.formContact textarea {
     width: 100%;
     border: none;
+    font-family: 'Inter';
+    font-size: 16px;
     border-bottom: 1px solid var(--white-color);
-    padding: 0.5rem 0;
+    padding: 1rem 1rem;
     background: none;
     outline: none;
     color: var(--white-color);
 }
 .formContact textarea {
-    height: 100px;
-}
-.formContact button{
+    height: 150px;
+    line-height: 20px;
+} 
+.formContact form button{
     background-color: var(--white-color);
+    cursor: pointer;
     color: var(--primary-color);
     border-radius: 5rem;
-    font-family: "Space Mono",monospace !important;
-    font-size: 12px;
-    line-height: 1.25em;
-    font-weight: 500;
+    font-family: "Helvetica Neue" !important;
+    font-size: 14px;
+    // font-weight: 500;
     letter-spacing: .05em;
     padding: 9px 30px;
     border: none;
+    transition: all 0.3s ease-in-out;
+}
+.formContact form button:hover{
+    transform: scale(1.2);
 }
 ::placeholder{
     color: var(--white-color);
+}
+.SocialMediaIcons{
+    display: flex;
+    gap: 20px;
+}
+.SocialMediaIcons a{
+    font-size: 25px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+    color: var(--primary-color);
+    background-color: var(--white-color);
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+.bg{
+    background-color: #A837F8;
+    color: white!important;
+}
+.SocialMediaIcons a:hover{
+    transform: scale(1.1);
 }

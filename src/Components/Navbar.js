@@ -37,7 +37,7 @@ export default function Navbar() {
 
             <NavLink activeClassName="active" to="/">Home</NavLink>
             <NavLink activeClassName="active" to="/about">About</NavLink>
-            <NavLink activeClassName="active" to="/services">Services</NavLink>
+            <NavLink activeClassName="active" to="/portfolio">Portfolio</NavLink>
             <NavLink activeClassName="active" to="/contact">Contact</NavLink>
           </div>
         </div>

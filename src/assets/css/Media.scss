@@ -1,0 +1,181 @@
+/* Styles Specific to the App Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  background-color: #1a1a1a;
+}
+::placeholder{
+  color: gray;
+}
+.app-container h2 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Form Styling */
+.app-container .media-form {
+  background-color: #2d2d2d;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Form Labels */
+.app-container .media-form label {
+  color: #aaa;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  display: block;
+  font-weight: 500;
+}
+
+/* Form Inputs */
+.app-container .media-form input[type="text"],
+.app-container .media-form input[type="file"] {
+  padding: 1rem;
+  background-color: #3a3a3a;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.app-container .media-form input[type="text"]:focus,
+.app-container .media-form input[type="file"]:focus {
+  border-color: #A837F8;
+  outline: none;
+  box-shadow: 0 0 8px #a837f8b3;
+}
+
+/* File Input Specific Styling */
+.app-container .media-form input[type="file"] {
+  background-color: #4e4e4e;
+  padding: 0.8rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border: none;
+  text-align: center;
+}
+
+.app-container .media-form input[type="file"]:disabled {
+  background-color: #6d6d6d;
+}
+
+.app-container .media-form input[type="file"]::file-selector-button {
+  background-color: #3f3f3f;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.app-container .media-form input[type="file"]::file-selector-button:hover {
+  background-color: #a04add;
+}
+
+/* Button Styles */
+.app-container .media-form button {
+  padding: 1rem;
+  background-color: #A837F8;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.app-container .media-form button:hover {
+  background-color: #7f12cd;
+}
+
+.app-container .media-form button:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+}
+
+/* Add More Button */
+.app-container .media-form button[type="button"] {
+  background-color: #5a5a5a;
+  color: #fff;
+  border: 1px solid #444;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.app-container .media-form button[type="button"]:hover {
+  background-color: #757575;
+}
+
+/* Remove Image Button */
+.app-container .media-form button.remove-image {
+  background-color: #f44336;
+  color: #fff;
+  border: 1px solid #e53935;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.app-container .media-form button.remove-image:hover {
+  background-color: #d32f2f;
+}
+
+/* Flexbox for Image and Description Section */
+.app-container .media-form div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.app-container .media-form div > div > div {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+  .app-container {
+    padding: 10px;
+  }
+
+  .app-container .media-form {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .app-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .app-container .media-form button {
+    font-size: 1rem;
+  }
+}
+
+/* Error Text Styling */
+.app-container .error-text {
+  color: #f44336;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
