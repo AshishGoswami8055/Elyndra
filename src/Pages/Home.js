@@ -165,9 +165,9 @@ export default function Home() {
         </div>
         <div className="socialMedia-content">
           <div className='socialMedia'>
-            <a href='#'>INSTAGRAM</a>
-            <a href='#'>YOUTUBE</a>
-            <a href='#'>FACEBOOK</a>
+            <a href='javascript:void(0)'>INSTAGRAM</a>
+            <a href='javascript:void(0)'>YOUTUBE</a>
+            <a href='javascript:void(0)'>FACEBOOK</a>
           </div>
         </div>
       </div>
@@ -179,7 +179,7 @@ export default function Home() {
         <div className='workProjectContent'>
           <div className='workProjectBox'>
             <div className='workProjectBoxTitle'>
-              <a href='#'><span>1</span> Game Development</a>
+              <a href='javascript:void(0)'><span>1</span> Game Development</a>
             </div>
             <div className='hoverDesign'><FontAwesomeIcon icon={faArrowRight} /></div>
           </div>
@@ -190,7 +190,7 @@ export default function Home() {
         <div className='workProjectContent'>
           <div className='workProjectBox'>
             <div className='workProjectBoxTitle'>
-              <a href='#'><span>2</span> Graphic Design</a>
+              <a href='javascript:void(0)'><span>2</span> Graphic Design</a>
             </div>
             <div className='hoverDesign'><FontAwesomeIcon icon={faArrowRight} /></div>
           </div>
@@ -201,7 +201,7 @@ export default function Home() {
         <div className='workProjectContent'>
           <div className='workProjectBox'>
             <div className='workProjectBoxTitle'>
-              <a href='#'><span>3</span> UI/UX Design</a>
+              <a href='javascript:void(0)'><span>3</span> UI/UX Design</a>
             </div>
             <div className='hoverDesign'><FontAwesomeIcon icon={faArrowRight} /></div>
           </div>
@@ -219,7 +219,7 @@ export default function Home() {
         <div className='workProjectContent'>
           <div className='workProjectBox'>
             <div className='workProjectBoxTitle'>
-              <a href='#'>Developer</a>
+              <a href='javascript:void(0)'>Developer</a>
             </div>
             <div></div>
           </div>
@@ -227,7 +227,7 @@ export default function Home() {
         <div className='workProjectContent'>
           <div className='workProjectBox'>
             <div className='workProjectBoxTitle'>
-              <a href='#'>UI Designer</a>
+              <a href='javascript:void(0)'>UI Designer</a>
             </div>
             <div></div>
           </div>
@@ -235,7 +235,7 @@ export default function Home() {
         <div className='workProjectContent'>
           <div className='workProjectBox'>
             <div className='workProjectBoxTitle'>
-              <a href='#'>Graphic Designer</a>
+              <a href='javascript:void(0)'>Graphic Designer</a>
             </div>
             <div></div>
           </div>
