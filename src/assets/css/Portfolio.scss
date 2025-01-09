@@ -1,25 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
-.porfolio_banner h2{
+.porfolio_banner h2 {
     color: var(--white-color);
-    font-family: "Space Mono",monospace !important;
-    font-size: 15vw;
+    font-family: "Space Mono", monospace !important;
+    font-size: 13vw;
     text-align: center;
     text-transform: uppercase;
-    user-select: none; /* Prevent text selection */
+    user-select: none;
+    /* Prevent text selection */
     letter-spacing: 2vw;
     margin: 0;
     padding: 0;
     line-height: 1;
     margin: 0 0 4vw 0;
 }
+
 .portfolio_video {
     width: 100%;
 }
-.portfolio_video video{
+
+.portfolio_video video {
     width: 100%;
     height: 100%;
 }
-.portfolio_video h3{
+
+.portfolio_video h3 {
     text-align: center;
     margin: 5vw 0;
     font-size: 5vw;
@@ -29,15 +33,17 @@
     font-weight: 500;
     font-family: "Lexend", serif !important;
 }
-.portfolio_content{
+
+.portfolio_content {
     margin: 5vw 0;
     background-color: #F6F6F6;
 }
 
-.portfolio_img img{
+.portfolio_img img {
     width: 100%;
 }
-.portfolio_Box{
+
+.portfolio_Box {
     display: grid;
     // align-items: center;
     grid-template-columns: repeat(2, 1fr);
@@ -45,10 +51,14 @@
     gap: 7vw;
     padding: 2vw 7vw;
 }
-.portfolio_Box p{
+.portfolio_img p {
+    
+    color: #171717!important;
+}
+.portfolio_Box p {
     font-weight: 500;
-    font-size: 21px;
+    font-size: 1.2vw;
     line-height: 35px;
     text-align: justify;
-    color: var(--white-color);
+    // color: var(--white-color);
 }

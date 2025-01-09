@@ -241,6 +241,9 @@
         padding: 0 10vw;
         justify-content: start!important;
     }
+    .workProjectContent:focus .workProjectBox .hoverDesign svg{
+        transform: rotate(90deg);
+      }
     //contact 
     .Map iframe{
         height: 80vw;

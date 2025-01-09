@@ -2,9 +2,23 @@ import React, { useEffect, useState } from "react";
 import { doc, getDoc } from "firebase/firestore"; // Import Firestore methods
 import { db } from "../Firebase/firebaseConfig"; // Import Firebase config
 import '../assets/css/Portfolio.scss'
+import AnimatedLetters from "../Components/AnimatedTexts/AnimatedLetters";
 export default function DisplayMedia() {
   const [mediaData, setMediaData] = useState(null); // Store fetched data
   const [loading, setLoading] = useState(true); // To show loading spinner
+  const [letterClass, setLetterClass] = useState('text-animate');
+  
+  const nameArray = ['P','O','R','T','F','O','L','I','O'];
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLetterClass('text-animate-hover');
+    }, 4000); // Match this duration with your SCSS animation time
+  
+   
+    return () => clearTimeout(timer);
+  }, []);
+
 
   // Fetch media data from Firestore when the component is mounted
   useEffect(() => {
@@ -47,7 +61,9 @@ export default function DisplayMedia() {
   
   return (
     <div className="porfolio_banner">
-      <h2>Portfolio</h2>
+      <h2>
+        <AnimatedLetters letterClass={letterClass} strArray={nameArray} idx={15} />
+      </h2>
       {mediaData ? (
         <>
           <div className="portfolio_video">

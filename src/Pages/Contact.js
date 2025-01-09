@@ -1,12 +1,26 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import '../assets/css/Contact.scss';
 import Map from '../assets/images/map2.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import emailjs from '@emailjs/browser'
+import AnimatedLetters from '../Components/AnimatedTexts/AnimatedLetters';
 export default function Contact() {
 
   const form = useRef();
+  const [letterClass, setLetterClass] = useState('text-animate');
+    
+    const nameArray = ['C','O','N','T','A','C','T'];
+  
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        setLetterClass('text-animate-hover');
+      }, 4000); // Match this duration with your SCSS animation time
+    
+     
+      return () => clearTimeout(timer);
+    }, []);
+  
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -29,9 +43,11 @@ export default function Contact() {
   return (
     <>
       <div className='contact_banner'>
-            <h1>Contact</h1>
+            <h1>
+              <AnimatedLetters letterClass={letterClass} strArray={nameArray} idx={15} />
+            </h1>
             <div className='Map'>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5938.003292341927!2d72.8308196272548!3d21.202957201398593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04ef9dc913593%3A0x96106052132786c3!2sSurat!5e1!3m2!1sen!2sin!4v1734865208960!5m2!1sen!2sin" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.855541400056!2d72.52239447350922!3d23.065757114718725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e8353cab15d3b%3A0x635ec8d6eaad6c90!2sSilver%20Casa%2C%20SILVER%20CASA%2C%20Shenbhai%20Nagar%2C%20Ahmedabad%2C%20Gujarat%20380081!5e0!3m2!1sen!2sin!4v1736062281334!5m2!1sen!2sin" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div className='contactContent'>
               <div className='contactForm'>

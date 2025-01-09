@@ -5,6 +5,8 @@ import team1 from "../assets/images/sampleTeam.jpg";
 import team2 from "../assets/images/sampleTeam2.jpg";
 import { gsap } from "gsap";
 import {motion} from "framer-motion"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 
 export default function Home() {
@@ -179,33 +181,36 @@ export default function Home() {
             <div className='workProjectBoxTitle'>
               <a href='#'><span>1</span> Game Development</a>
             </div>
-            <div>button</div>
+            <div className='hoverDesign'><FontAwesomeIcon icon={faArrowRight} /></div>
+          </div>
+          <div className='hithere'>
+            <img src={team1} width="300px"/>
           </div>
         </div>
         <div className='workProjectContent'>
           <div className='workProjectBox'>
             <div className='workProjectBoxTitle'>
-              <a href='#'><span>2</span> Ui/Ux Graphic Design</a>
+              <a href='#'><span>2</span> Graphic Design</a>
             </div>
-            <div>button</div>
+            <div className='hoverDesign'><FontAwesomeIcon icon={faArrowRight} /></div>
+          </div>
+          <div className='hithere'>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
           </div>
         </div>
         <div className='workProjectContent'>
           <div className='workProjectBox'>
             <div className='workProjectBoxTitle'>
-              <a href='#'><span>3</span> Web Development</a>
+              <a href='#'><span>3</span> UI/UX Design</a>
             </div>
-            <div>button</div>
+            <div className='hoverDesign'><FontAwesomeIcon icon={faArrowRight} /></div>
+          </div>
+          <div className='hithere'>
+            <img src={team1} width="300px"/>
           </div>
         </div>
-        <div className='workProjectContent'>
-          <div className='workProjectBox'>
-            <div className='workProjectBoxTitle'>
-              <a href='#'><span>4</span> Application Development</a>
-            </div>
-            <div>button</div>
-          </div>
-        </div>
+        
+        
       </div>
       <div className='workProject'>
         <div className='workProjectTitle'>

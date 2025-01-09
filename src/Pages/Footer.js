@@ -17,7 +17,7 @@ export default function Footer() {
                 </div>
             </div>
             <div className='footerPortfolio'>
-                <div><p>Portfolio</p></div>
+                <div><p>Social_Links</p></div>
                 <div>
                     <ul>
                         <li><a href='#'>Instagram</a></li>

@@ -265,11 +265,40 @@ a {
   font-family: "Space Mono",monospace !important;
 }
 
+.hoverDesign{
+  background-color: var(--white-color);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 35px;
+}
+.hoverDesign svg{
+  transition: all 0.3s ease-in-out;
+}
+.hoverDesign svg path{
+  fill: var(--primary-color)!important;
+}
+.workProjectContent:hover .workProjectBox .hoverDesign svg{
+  transform: rotate(90deg);
+}
+.workProjectContent .hithere {
+  opacity: 0;
+  max-height: 0; /* Initially collapsed */
+  overflow: hidden; /* Prevent content overflow */
+  transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out; /* Smooth transitions */
+}
 
-
-
-
-
+.workProjectContent:hover .hithere {
+  opacity: 1;
+  max-height: 500px; /* Set a sufficiently large value to cover the tallest content */
+}
+.hithere p{
+  color: var(--white-color);
+  // color: #171717;
+  width: 300px;
+  margin: 17px 0;
+}
 
 
 
